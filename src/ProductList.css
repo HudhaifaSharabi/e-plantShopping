@@ -80,6 +80,15 @@ body {
     transition: transform 0.3s ease-in-out;
     z-index: 1;
 }
+.product-category{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #555;
+    border-top: 2px solid #555;
+    width: fit-content;
+    margin: 20px auto;
+}
 
 .product-title {
     font-weight: bold;
@@ -106,10 +115,16 @@ body {
     transition: background-color 0.3s ease-in-out;
     margin-top: 10px;
 }
-
-.product-button:hover {
-    background-color: #c0392b;
+.product-button.disabled,
+.product-button:disabled {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+  border: none;
 }
+/* .product-button:hover {
+    background-color: #c0392b;
+} */
 
 /* Pseudo-elements - Sale badge */
 .product-card::before {
@@ -211,9 +226,9 @@ body {
     cursor: pointer;
   }
   
-  .product-button:hover {
+  /* .product-button:hover {
     background-color: #45a049;
-  }
+  } */
   
   .product-button.added-to-cart {
     background-color: grey; /* Grey when product is added */
